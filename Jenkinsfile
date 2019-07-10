@@ -9,5 +9,13 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
+         stage('artifact') {
+
+               archive 'target/*.war'
+             }
+         stage ('deploy'){
+         echo 'deployment started'
+         
+   }  
     }
 }
