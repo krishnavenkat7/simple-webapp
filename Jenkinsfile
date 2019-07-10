@@ -10,12 +10,13 @@ pipeline {
             }
         }
          stage('artifact') {
-
+             steps {
                archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
              }
+         }
          stage ('deploy'){
-         
-         
-        }  
+             steps {
+             }
+         }
     }
 }
