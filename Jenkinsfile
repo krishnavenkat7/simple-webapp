@@ -14,7 +14,7 @@ pipeline {
                archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
              }
          }
-         stage ('deploy'){
+         stage ('deploy') {
              steps {
              }
          }
