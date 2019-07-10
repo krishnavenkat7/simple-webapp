@@ -9,7 +9,7 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-         stage('artifact') {
+         stage('Archiveartifact') {
              steps {
                archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
              }
