@@ -11,11 +11,11 @@ pipeline {
         }
          stage('artifact') {
 
-               archive 'target/*.war'
+               archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
              }
          stage ('deploy'){
-         echo 'deployment started'
          
-   }  
+         
+        }  
     }
 }
