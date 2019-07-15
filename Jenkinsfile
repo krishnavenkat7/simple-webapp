@@ -17,7 +17,7 @@ pipeline {
          stage ('deploy') {
              steps {
                  echo ''
-                 #bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
+                 // bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
              }
          }
     }
