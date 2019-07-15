@@ -14,6 +14,11 @@ pipeline {
                archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
              }
          }
+        stage('BUildImage') {
+             steps {
+               sh 'sudo docker build -t mywebapp .'
+             }
+         }
          stage ('deploy') {
              steps {
                  echo ''
