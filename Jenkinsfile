@@ -16,7 +16,7 @@ pipeline {
          }
         stage('BUildImage') {
              steps {
-               sh 'sudo docker build -t mywebapp .'
+               sh 'docker build -t mywebapp .'
              }
          }
          stage ('deploy') {
