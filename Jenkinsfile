@@ -16,7 +16,10 @@ pipeline {
          }
         stage('BUildImage') {
              steps {
-               app = docker.build("WebApp")
+                 echo 'Starting to build docker image'
+                 script {
+                     app = docker.build("WebApp:${env.BUILD_ID}")
+                 }
              }
          }
          stage ('deploy') {
