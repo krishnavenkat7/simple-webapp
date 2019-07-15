@@ -18,7 +18,7 @@ pipeline {
              steps {
                  echo 'Starting to build docker image'
                  script {
-                     app = docker.build("WebApp:${env.BUILD_ID}")
+                     app = docker.build("webapp:${env.BUILD_ID}")
                  }
              }
          }
