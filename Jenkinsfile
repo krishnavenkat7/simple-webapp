@@ -16,7 +16,7 @@ pipeline {
          }
         stage('BUildImage') {
              steps {
-               app = docker.build("${env.BUILD_ID}")
+               app = docker.build("WebApp")
              }
          }
          stage ('deploy') {
