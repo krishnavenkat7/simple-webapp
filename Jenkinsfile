@@ -23,6 +23,15 @@ pipeline {
                  }
              }
          }
+        stage('Push Image 2 Hub') {
+             steps {
+                 echo 'Starting to push the docker image'
+                 script {
+                     docker.withRegistry('https://registry.hub.docker.com', 'docker_login')
+                     app.push("webapp:${env.BUILD_ID}")
+                 }
+             }
+         }
          stage ('deploy') {
              steps {
                  echo ''
