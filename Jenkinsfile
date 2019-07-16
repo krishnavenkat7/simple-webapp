@@ -42,6 +42,8 @@ pipeline {
              steps {
                  echo ''
                  // bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
+                 sh 'kubectl apply -f /home/pearson/helm'
+                 sh 'kubectl get pods'
              }
          }
     }
