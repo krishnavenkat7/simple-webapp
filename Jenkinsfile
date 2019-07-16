@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-    registry = "venkatnamburi/sampleapp"
+    registry = "https://cloud.docker.com/repository/registry-1.docker.io/venkatnamburi/sampleapp"
     registryCredential = 'docker_login'
     }
     tools {
@@ -31,7 +31,7 @@ pipeline {
              steps {
                  echo 'Starting to push the docker image'
                  script {
-                     docker.withRegistry('https://registry.hub.docker.com', registryCredential ) {
+                     docker.withRegistry('registry', registryCredential ) {
                      app.push() 
                      }
                  }
