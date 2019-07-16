@@ -32,7 +32,7 @@ pipeline {
                  echo 'Starting to push the docker image'
                  script {
                      docker.withRegistry('', registryCredential ) {
-                     app.push("webapp:${env.BUILD_ID}") 
+                     app.push() 
                      }
                  }
              }
