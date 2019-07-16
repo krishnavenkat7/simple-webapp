@@ -31,6 +31,7 @@ pipeline {
              steps {
                  echo 'Starting to push the docker image'
                  script {
+                     sh 'docker login'
                      docker.withRegistry('', registryCredential ) {
                      app.push() 
                      }
