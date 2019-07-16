@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+    registry = "venkatnamburi/venkatnamburi/sampleappe"
+    registryCredential = 'docker_login'
+    }
     tools {
         maven 'M3'
     }
@@ -27,8 +31,9 @@ pipeline {
              steps {
                  echo 'Starting to push the docker image'
                  script {
-                     docker.withRegistry('https://registry.hub.docker.com', 'docker_login')
-                     app.push("webapp:${env.BUILD_ID}")
+                     docker.withRegistry('https://registry.hub.docker.com', registryCredential ) {
+                     app.push( ) 
+                     }
                  }
              }
          }
