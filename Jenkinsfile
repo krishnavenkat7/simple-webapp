@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-    registry = "venkatnamburi/venkatnamburi/sampleappe"
+    registry = "venkatnamburi/sampleapp"
     registryCredential = 'docker_login'
     }
     tools {
