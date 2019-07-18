@@ -42,7 +42,7 @@ pipeline {
              steps {
                  echo ''
                  // bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
-                 sh 'ssh -t -t -i /var/lib/jenkins/.ssh/id_rsa.pub 172.31.94.218 && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
+                 sh 'ssh -t -t -o StrictHostKeyChecking=no -i /var/lib/jenkins/my.pem 172.31.94.218 && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
                  
              }
          }
