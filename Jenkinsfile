@@ -43,7 +43,7 @@ pipeline {
                  echo ''
                  // bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
                  //sh 'ssh ec2-user@172.31.94.218 && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
-                  sshCommand remote: remote, command: "ls -lrt"
+                  sshCommand command: "ls -lrt"
                  
              }
          }
