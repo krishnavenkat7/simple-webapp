@@ -63,6 +63,7 @@ pipeline {
             sh '''
               docker rmi -f $(docker images -f 'dangling=true' -q) || true
              docker rmi -f $(docker images | sed 1,2d | awk '{print $3}') || true
+             docker rmi -f venkatnamburi/webapp:stable
            
             '''
            }
@@ -95,7 +96,7 @@ pipeline {
                  //sh 'ssh ec2-user@ && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
                   // sshCommand command: "ls -lrt"
                  sh '''
-                       ansible all -m shell -a "echo $USER && sudo /usr/local/bin/helm upgrade first /root/firstrepo/"
+                       ansible all -m shell -a "echo $USER && sudo docker pull image venkatnamburi/webapp:stable && sudo /usr/local/bin/helm upgrade first /root/firstrepo/"
                     '''
              }
          }
