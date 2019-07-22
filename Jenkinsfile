@@ -61,8 +61,9 @@ pipeline {
         stage('Cleanup'){
         steps{
             sh '''
-            docker rmi $(docker images -f 'dangling=true' -q) || true
-            docker rmi $(docker images | sed 1,2d | awk '{print $3}') || true
+            // docker rmi $(docker images -f 'dangling=true' -q) || true
+            // docker rmi $(docker images | sed 1,2d | awk '{print $3}') || true
+            docker rmi -f ("$registry:stable")
             '''
            }
         }
