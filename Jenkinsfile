@@ -93,7 +93,9 @@ pipeline {
                  // bat '''copy target\\*.war C:\\apache-tomcat-8.5.42-windows-x64\\apache-tomcat-8.5.42\\webapps\\'''
                  //sh 'ssh ec2-user@ && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
                   // sshCommand command: "ls -lrt"
-                 sh '/usr/local/bin/helm upgarde -n first firstrepo"'
+                 sh '''
+                        /usr/local/bin/helm upgarde -n first firstrepo"
+                    '''
              }
          }
     }
