@@ -71,7 +71,8 @@ pipeline {
                  echo 'Starting to build docker image'
                  script {
                     // app = docker.build("webapp:${env.BUILD_ID}")
-                     app = docker.build("$registry:stable-${env.BUILD_ID}")
+                     // app = docker.build("$registry:stable-${env.BUILD_ID}")
+                     app = docker.build("$registry:stable)
                      // app.push()
                  }
              }
