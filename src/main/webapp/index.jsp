@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello first CI/CD using Helm/K8</h1>
-        <p>This is simple webapp. </p>
+        <p>This is simple PIpeline. </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
