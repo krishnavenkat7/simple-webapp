@@ -94,7 +94,7 @@ pipeline {
                  //sh 'ssh ec2-user@ && sudo -i && helm upgrade first ./firstrepo && kubectl get all -o wide'
                   // sshCommand command: "ls -lrt"
                  sh '''
-                       ansible all -m shell -a "/usr/local/bin/helm upgrade -name first /root/firstrepo/"
+                       ansible all -m shell -a "/usr/local/bin/helm upgrade first /root/firstrepo/"
                     '''
              }
          }
