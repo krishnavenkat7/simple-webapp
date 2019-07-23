@@ -93,7 +93,7 @@ pipeline {
          }
          stage ('deploy') {
              when {
-                branch 'development' 
+                branch '*/development' 
             }
              steps {
                  echo ''
