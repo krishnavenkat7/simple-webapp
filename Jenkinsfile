@@ -93,7 +93,9 @@ pipeline {
          }
          stage ('deploy') {
              when {
-                branch '*/development' 
+                expression {
+                    return env.GIT_BRANCH == "origin/development"
+                        }
             }
              steps {
                  echo ''
