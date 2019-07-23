@@ -21,7 +21,7 @@ def getTargetEnv(String branchName){
             }
     }
     return deploy_env
-    echo '$deploy_env'
+    echo '${deploy_env}'
 }
 
 def getImageTag(String currentBranch)
