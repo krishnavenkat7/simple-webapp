@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello sample CI/CD pipeline</h1>
-        <p>sample tomcat k8 deployment using helm</p>
+        <p>sample</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
