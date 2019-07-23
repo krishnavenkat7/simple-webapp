@@ -55,7 +55,8 @@ pipeline {
         }
          stage('Archiveartifact') {
              steps {
-               archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
+               // archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
+                  archiveArtifacts artifacts: 'target/*.war'
              }
          }
         stage('Cleanup'){
