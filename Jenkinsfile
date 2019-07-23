@@ -8,13 +8,13 @@ def getTargetEnv(String branchName){
     def deploy_env = 'none';
     switch(branchName) {
         case 'master':
-            deploy_env='uat'
+            deploy_env='Pre-prod,Prod'
         break
         case 'develop':
-            deploy_env = 'dev'
+            deploy_env = 'DEV'
         default:
             if(branchName.startsWith('release')){
-                deploy_env='sit'
+                deploy_env='UAT'
             }
             if(branchName.startsWith('feature')){
                 deploy_env='none'
