@@ -51,8 +51,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello first CI/CD using Helm/K8</h1>
-        <p>This is my simple PIpeline. </p>
+        <h1>Hello sample CI/CD pipeline Helm/K8</h1>
+        <p>This is my simple Pipeline. </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
