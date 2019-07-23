@@ -44,6 +44,7 @@ pipeline {
     registry = "venkatnamburi/webapp"
     registryCredential = 'docker_login'
     GIT_COMMIT_SHORT_HASH = sh (script: "git rev-parse --short HEAD", returnStdout: true)
+        echo '${registery}'
     }
     tools {
         maven 'M3'
