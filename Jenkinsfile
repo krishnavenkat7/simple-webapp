@@ -93,7 +93,7 @@ pipeline {
          }
          stage ('deploy') {
              when {
-                 branch development
+                 branch 'development'
                 // expression {
                 //    return env.GIT_BRANCH == "origin/development"
                  //       }
